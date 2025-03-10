@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background-image: url(/Projeto3/img/hellomiau.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 400px;
+
+}
+.wrapper{
+    height: 100%;
+    width: 330px;
+    position: relative;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.wrapper .menu-btn{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 45px;
+    width: 45px;
+    z-index: 999;
+    color:#f2f2f2;
+    background: #e4b7d1;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 23px;
+    transition: all 0.3s ease;
+}
+#btn:checked ~ .menu-btn{
+    left: 247px;
+}
+#btn:checked ~.menu-btn i:before{
+    content:"\f00d";
+}/*Muda o icone se precionado*/
+.wrapper #sidebar{
+    position: fixed;
+    height: 100%;
+    width: 270px;
+    background: red;
+    overflow: hidden;
+    left: -270px;
+    transition: all 0.3s ease-out;
+}
+#btn:checked ~ #sidebar{
+    left: 0;
+}
+#sidebar .title{
+    color: #f2f2f2;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;   
+    background: #ca9fb8;
+    text-align: center;
+}
+#sidebar .list-items{
+    position: relative;
+    background: #e4b7d1;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+#sidebar .list-items li{
+    padding-left: 40px;
+    line-height: 50px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid #6d1616a8;
+    transition:all 0.3 ease;
+}
+#sidebar .list-items li:hover{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 10px 3px #55123962;
+}
+#sidebar li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+#sidebar .list-items li a i{
+    margin-right: 20px;
+}
+#sidebar .list-items .icons{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sidebar .list-items .icons a{
+    margin: 0 5px;
+    color:#f2f2f2;
+    display:block;
+    height: 40px;
+    width: 40px;
+    background: #ca9fb8;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    transition:  all 0.3s ease;
+}
+#sidebar .list-items .icons a:hover{
+    background: #b48ba3;
+}
+.content {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0 20px;
+    text-align: center;
+    background-color: #e4b7d1;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 3px #55123962;
+}
+.content .title{
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 600;
+   
+}
+.content  .sub_title{
+    color: #3d3d3d;
+    font-size: 20px;
+    padding: 5px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/Projeto22/css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="/Projeto22/img/hsr_logo.png">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Characters</a></li>
+                        <li><a href="#">Worlds</a></li>
+                    
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <img src="/Projeto22/img/menu.png">
+                </div>
+            </nav>
+        </div>
+        <div class="content2"> <h1>Join the Express!</h1> <hr>
+            <p>Travel across vast and mysterious worlds, uncovering secrets hidden among the stars. Engage in dynamic turn-based combat where strategy and skill determine victory. Discover a cast of diverse characters, each with their own stories, abilities, and destinies intertwined with the fate of the universe. The Astral Express awaits those brave enough to face the unknown and challenge the power of the Stellaron.</p> </div>
+            
+            
+        <div class="content">
+            <div class="social-icons">
+                <img src="/Projeto22/img/github.png">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <img src="/Projeto22/img/search--v4.png">
+            </div>
+            
+        </div>
+        <img src="/Projeto22/img/galaxy.png" id="stars">
+        <!-- <img src="/Projeto22/img/train.png" id="train"> -->
+        <div id="trailblazer">
+            <img src="/Projeto22/img/8001.png" class="tb1">
+            <img src="/Projeto22/img/3022.webp" class="tb2">
+            <img src="/Projeto22/img/8003.png" class="tb3">
+        </div>
+        <img src="/Projeto22/img/play-white-png-icon-5.png" id="myImg">
+    </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+        myImg.onclick = function(){
+            if(trailblazer.style.webkitAnimationPlayState == "paused")
+            {
+        //    stars.style.webkitAnimationPlayState = "running";
+        //    train.style.webkitAnimationPlayState ="running";
+           trailblazer.style.webkitAnimationPlayState = "running";
+            myImg.src = '/Projeto22/img/play-white-png-icon-5.png'
+        
+        }
+           else{
+            // stars.style.webkitAnimationPlayState = "paused";
+            // train.style.webkitAnimationPlayState = "paused";
+            trailblazer.style.webkitAnimationPlayState = "paused";
+            myImg.src = '/Projeto22/img/pause.png'
+            }
+        }
+    </script>
+</body>
+</html>
